@@ -13,4 +13,14 @@ void main() {
 
   print(nilai_bulat);
   print(nilai_desimal);
+
+//   num
+// ● Jika kita ingin menggunakan tipe data number yang bisa int ataupun double, kita bisa
+// menggunakan tipe data num
+
+  num nilai_num = 100;
+
+  nilai_num = 89.00;
+
+  print('Nilai num $nilai_num');
 }
