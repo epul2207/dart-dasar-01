@@ -40,4 +40,41 @@ void main() {
 // ● Namun jika kita ingin membuat parameter yang optional, artinya tidak wajib dikirim, kita bisa wrap
 // dalam kurung []
 // ● Dan parameter optional haruslah nullable
+
+  //Membuat fungsi tambah
+
+  int tambah(int nilai_1, [int nilai_2 = 1]) {
+    return nilai_1 + nilai_2;
+  }
+
+  //Menggunakan fungsi tambah
+
+  print(tambah(10));
+
+//   Named Parameter
+// ● Secara default, posisi parameter ketika kita memanggil function harus sesuai dengan posisi
+// parameter di function tersebut
+// ● Dart memiliki fitur dengan named parameter, dimana saat memanggil parameter kita bisa
+// menyebutkan nama parameter nya, sehingga posisinya tidak perlu harus sesuai dengan posisi
+// parameter nya
+// ● Namun ketika membuat function nya, kita perlu melakukan perubahan ketika membuat parameter
+// nya, yaitu dengan menggunakan kurung kurawal {}
+// ● Secara default, named parameter adalah nullable, sehingga kita perlu tambahkan karakter ?
+
+  int kali({int nilai_a = 1, int nilai_b = 1}) {
+    return nilai_a * nilai_b;
+  }
+
+  print(kali(nilai_b: 10, nilai_a: 11));
+
+//   Required Parameter
+// ● Pada named parameter, kita juga bisa memaksa sebuah parameter menjadi mandatory, sehingga
+// kita memanggil function tersebut, parameter nya wajib ditambahkan
+// ● Caranya kita bisa tambahkan kata kunci required di awal parameter
+
+  int pengurangan({required int nilai_1, int nilai_2 = 1}) {
+    return nilai_1 - nilai_2;
+  }
+
+  print(pengurangan(nilai_1: 10));
 }
